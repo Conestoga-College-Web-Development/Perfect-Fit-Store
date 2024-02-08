@@ -1,0 +1,56 @@
+.page {
+  color: #6c4401;
+  padding: 3rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem auto;
+  background-color: white;
+  width: 36%;
+  height: 60vh;
+  border: 1px solid brown;
+}
+.field,
+.continueBtn {
+  margin: 0.8rem;
+  padding: 4px 10px;
+  height: 2rem;
+  width: 90%;
+  border: 1px solid gray;
+}
+.continueBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 94%;
+  padding: 1.32rem;
+  border: none;
+  color: white;
+  background-color: #6c4401;
+}
+.text {
+  text-decoration: none;
+  color: #6c4401;
+  text-decoration: underline;
+}
+.error {
+  color: red;
+  margin: 0;
+  padding: 0;
+  align-self: baseline;
+}
+@media screen and (max-width: 468px) {
+  .page {
+    width: 68%;
+  }
+  .field {
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+  .continueBtn {
+    width: 100%;
+    margin: 0;
+  }
+}

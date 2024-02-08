@@ -1,0 +1,37 @@
+nav {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  background: white;
+}
+.links {
+  margin: 12px 4rem;
+  display: flex;
+  gap: 20px;
+}
+.Login {
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid lightgray;
+}
+.logo {
+  width: 8%;
+}
+.menu {
+  display: flex;
+  gap: 4rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 468px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 40%;
+  }
+}

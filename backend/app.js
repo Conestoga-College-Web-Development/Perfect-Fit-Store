@@ -1,0 +1,25 @@
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const { mongoose } = require("mongoose");
+mongoose.connect(
+  "mongodb+srv://admin:admin@cluster0.s7nlndv.mongodb.net/?retryWrites=true&w=majority"
+);
+app.listen(5000, (req, res) => {
+  console.log("Started at 5000");
+});
+const userRegister = require("./controllers/userRegisterController");
+const login = require("./controllers/loginController");
+//routes
+const jwtTokenVerfiy = require("./middleware/authMiddleware");
+app.get("/", jwtTokenVerfiy, (req, res) => {
+  console.log("Protected route accessed");
+  res.status(200).json({ message: "success" });
+});
+app.post("/userRegister", userRegister);
+app.post("/login", login);
