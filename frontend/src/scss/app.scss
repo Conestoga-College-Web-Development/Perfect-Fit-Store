@@ -1,0 +1,22 @@
+@import './variables.scss';
+@import './uikit/variables-theme.scss';
+@import './uikit/mixins-theme.scss';
+.uk-navbar-container {
+  background-color: white !important;
+}
+//MIXIN TYPE HERE
+@import './uikit/uikit-theme.scss';
+@import 'boxicons';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' !important;
+}
+.mainColor {
+  color: #6c4401 !important;
+}
+
+.mainBG {
+  background-color: #f3f1eb !important;
+}
