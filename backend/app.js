@@ -17,7 +17,7 @@ const userRegister = require('./controllers/userRegisterController');
 const login = require('./controllers/loginController');
 const categoryController = require('./controllers/categoryController');
 const productController = require('./controllers/productController');
-const { getCategory, getProduct } = require('./controllers/user/indexController');
+const { getCategory, getProduct, getProductByCategory, getProductById } = require('./controllers/user/indexController');
 //routes
 
 const storage = multer.diskStorage({
@@ -44,6 +44,8 @@ app.patch('/api/product', productController.distory);
 //User Data Route
 app.get('/user/category', getCategory);
 app.get('/user/homepage-product', getProduct);
+app.get('/user/product-by-category/:category', getProductByCategory);
+app.get('/user/product/:id', getProductById);
 
 const jwtTokenVerfiy = require('./middleware/authMiddleware');
 app.get('/', jwtTokenVerfiy, (req, res) => {
